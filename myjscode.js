@@ -51,7 +51,7 @@ $(function(){
     
       else
       {
-          $("name_error_message").hide();
+          $("#name_error_message").hide();
       }
 
   }
@@ -71,7 +71,7 @@ $(function(){
     
       else
       {
-          $("password_error_message").hide();
+          $("#password_error_message").hide();
       }
 
   }
@@ -93,7 +93,7 @@ $(function(){
     
       else
       {
-          $("password_error_message").hide();
+          $("#password_error_message").hide();
       }
 
   }
@@ -107,7 +107,7 @@ $(function(){
       chek_password();
       chek_confirm_password();
 
-      if(error_name==false && error_password== false && error_confirm_password==false)
+      if(error_name==false || error_password== false || error_confirm_password==false)
       {
           return true;
       }
