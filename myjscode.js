@@ -88,12 +88,12 @@ $(function(){
          
           $("#confirm_password_error_message").show();
          
-          error_password = true;
+          error_confirm_password = true;
       }
     
       else
       {
-          $("#password_error_message").hide();
+          $("#confirm_password_error_message").hide();
       }
 
   }
@@ -107,7 +107,7 @@ $(function(){
       chek_password();
       chek_confirm_password();
 
-      if(error_name==false || error_password== false || error_confirm_password==false)
+      if(error_name==false && error_password== false && error_confirm_password==false)
       {
           return true;
       }
