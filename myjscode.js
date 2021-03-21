@@ -3,12 +3,7 @@ $(function () {
 });
 
 function handleFormSubmit(e) {
-  alert("Form is being submitted");
 
-  e.preventDefault();
-}
-
-$(function(){
   $("#name_error_message").hide();
   $("#email_error_message").hide();
   $("#password_error_message").hide();
@@ -110,14 +105,22 @@ $(function(){
       if(error_name==false && error_password== false && error_confirm_password==false)
       {
           return true;
+          alert("Form is being submitted");
+
       }
       else{
           return false;
       }
-  });
+    });
+
+  e.preventDefault();
+}
+
+// $(function(){
+//   });
 
 
-});
+// });
 
 
 
