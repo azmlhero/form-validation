@@ -1,9 +1,14 @@
-$(function () {
-  $("#myForm").submit(handleFormSubmit);
-});
+  $(function () {
+    $("#myForm").submit(handleFormSubmit);
+  });
 
-function handleFormSubmit(e) {
+  function handleFormSubmit(e) {
+    alert("Form is being submitted");
 
+    e.preventDefault();
+  }
+
+$(function(){
   $("#name_error_message").hide();
   $("#email_error_message").hide();
   $("#password_error_message").hide();
@@ -38,7 +43,7 @@ function handleFormSubmit(e) {
       if(name_length<5)
       {
           $("#name_error_message").html("Name should contain atleast 5 characters!!!");
-         
+          $("#name").css("border", "2px solid red");
           $("#name_error_message").show();
          
           error_name = true;
@@ -58,7 +63,7 @@ function handleFormSubmit(e) {
       if(password_length<8)
       {
           $("#password_error_message").html("Password should contain atleast 8 characters!!!");
-         
+          $("#password").css("border", "2px solid red");
           $("#password_error_message").show();
          
           error_password = true;
@@ -80,7 +85,7 @@ function handleFormSubmit(e) {
       if(password != confirm_password)
       {
           $("#confirm_password_error_message").html("Password doesn't match");
-         
+          $("#confirm_password").css("border", "2px solid red");
           $("#confirm_password_error_message").show();
          
           error_confirm_password = true;
@@ -105,22 +110,14 @@ function handleFormSubmit(e) {
       if(error_name==false && error_password== false && error_confirm_password==false)
       {
           return true;
-          alert("Form is being submitted");
-
       }
       else{
           return false;
       }
-    });
-
-  e.preventDefault();
-}
-
-// $(function(){
-//   });
+  });
 
 
-// });
+});
 
 
 
