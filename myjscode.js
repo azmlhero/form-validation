@@ -85,7 +85,7 @@ $(function(){
       if(password != confirm_password)
       {
           $("#confirm_password_error_message").html("Password doesn't match");
-          $("#confirm_password").css("border", "2px solid red");
+          $("#confirm_").css("border", "2px solid red");
           $("#confirm_password_error_message").show();
          
           error_confirm_password = true;
